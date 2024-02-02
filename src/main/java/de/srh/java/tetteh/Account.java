@@ -1,23 +1,22 @@
 package de.srh.java.tetteh;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Account {
     private int accountNumber;
     private String customerName;
-    private int pin;
+    private String pin;
     private boolean state;
-    private int accountValue;
+    private double accountValue;
+    private int loginFailureCounter;
+    private ArrayList<TransactionLog> transactionLog;
 
-
-    public Account(int accountNumber, String customerName, int pin, int accountValue) {
+    public Account(int accountNumber, String customerName, String pin) {
         this.accountNumber = accountNumber;
         this.customerName = customerName;
         this.pin = pin;
-        this.state = true;
-        this.accountValue = accountValue;
     }
-
 
     public int getAccountNumber() {
         return accountNumber;
@@ -27,7 +26,7 @@ public class Account {
         return customerName;
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 
@@ -35,30 +34,26 @@ public class Account {
         return state;
     }
 
-    public int getAccountValue() {
+    public double getAccountValue() {
         return accountValue;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public int getLoginFailureCounter() {
+        return loginFailureCounter;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public ArrayList<TransactionLog> getTransactionLog() {
+        return transactionLog;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
+    public void withdraw(int withdrawAmount){
+
+    }
+    public void deposit(int depositAmount){
+
     }
 
-    public void setState(boolean state) {
-        this.state = state;
+    public void updateFailureLoginCounter(){
+
     }
-
-    public void setAccountValue(int accountValue) {
-        this.accountValue = accountValue;
-    }
-
-
-
 }
